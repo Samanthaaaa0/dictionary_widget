@@ -7,18 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15708F4D3060EB7200864900 /* CiCiDictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F4C3060EB7200864900 /* CiCiDictApp.swift */; };
-		15708F4F3060EB7200864900 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F4E3060EB7200864900 /* ContentView.swift */; };
 		15708F513060EB7400864900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15708F503060EB7400864900 /* Assets.xcassets */; };
 		15708F543060EB7400864900 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15708F533060EB7400864900 /* Preview Assets.xcassets */; };
+		15708F613060EB9200864900 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15708F603060EB9200864900 /* WidgetKit.framework */; };
+		15708F633060EB9200864900 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15708F623060EB9200864900 /* SwiftUI.framework */; };
+		15708F6A3060EB9500864900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15708F693060EB9500864900 /* Assets.xcassets */; };
+		15708F6E3060EB9500864900 /* CiCiWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15708F5E3060EB9200864900 /* CiCiWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15708F9B3060F20900864900 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9A3060F20900864900 /* Theme.swift */; };
+		15708F9C3060F20900864900 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9A3060F20900864900 /* Theme.swift */; };
+		15708FA13060F22E00864900 /* SeedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9D3060F22E00864900 /* SeedDictionary.swift */; };
+		15708FA23060F22E00864900 /* SeedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9D3060F22E00864900 /* SeedDictionary.swift */; };
+		15708FA33060F22E00864900 /* ChineseWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9E3060F22E00864900 /* ChineseWord.swift */; };
+		15708FA43060F22E00864900 /* ChineseWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9E3060F22E00864900 /* ChineseWord.swift */; };
+		15708FA53060F22E00864900 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9F3060F22E00864900 /* WordStore.swift */; };
+		15708FA63060F22E00864900 /* WordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708F9F3060F22E00864900 /* WordStore.swift */; };
+		15708FA73060F22E00864900 /* PinyinFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FA03060F22E00864900 /* PinyinFormatter.swift */; };
+		15708FA83060F22E00864900 /* PinyinFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FA03060F22E00864900 /* PinyinFormatter.swift */; };
+		15708FAD3060F25A00864900 /* CiCiWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FA93060F25A00864900 /* CiCiWidgetViews.swift */; };
+		15708FAE3060F25A00864900 /* CiCiWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FAA3060F25A00864900 /* CiCiWidgetBundle.swift */; };
+		15708FAF3060F25A00864900 /* CiCiWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FAC3060F25A00864900 /* CiCiWidgetProvider.swift */; };
+		15708FBE3060F27400864900 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB03060F27300864900 /* SpeechHelper.swift */; };
+		15708FBF3060F27400864900 /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB13060F27300864900 /* WordDetailView.swift */; };
+		15708FC03060F27400864900 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB23060F27400864900 /* ReviewView.swift */; };
+		15708FC13060F27400864900 /* AIWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB33060F27400864900 /* AIWordGenerator.swift */; };
+		15708FC23060F27400864900 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB43060F27400864900 /* RootTabView.swift */; };
+		15708FC33060F27400864900 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB53060F27400864900 /* DictionaryView.swift */; };
+		15708FC43060F27400864900 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB63060F27400864900 /* KeychainHelper.swift */; };
+		15708FC53060F27400864900 /* CiCiDictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB73060F27400864900 /* CiCiDictApp.swift */; };
+		15708FC63060F27400864900 /* CEDICTParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FB83060F27400864900 /* CEDICTParser.swift */; };
+		15708FC73060F27400864900 /* DictionaryLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FBA3060F27400864900 /* DictionaryLookup.swift */; };
+		15708FC83060F27400864900 /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FBB3060F27400864900 /* AddWordView.swift */; };
+		15708FC93060F27400864900 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FBC3060F27400864900 /* SettingsView.swift */; };
+		15708FCA3060F27400864900 /* MyVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15708FBD3060F27400864900 /* MyVocabularyView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15708F6C3060EB9500864900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15708F413060EB7200864900 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15708F5D3060EB9200864900;
+			remoteInfo = CiCiWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15708F723060EB9500864900 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				15708F6E3060EB9500864900 /* CiCiWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		15708F493060EB7200864900 /* CiCiDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiCiDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		15708F4C3060EB7200864900 /* CiCiDictApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiCiDictApp.swift; sourceTree = "<group>"; };
-		15708F4E3060EB7200864900 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15708F503060EB7400864900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15708F533060EB7400864900 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15708F5E3060EB9200864900 /* CiCiWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CiCiWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		15708F603060EB9200864900 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		15708F623060EB9200864900 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		15708F693060EB9500864900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15708F6B3060EB9500864900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15708F9A3060F20900864900 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		15708F9D3060F22E00864900 /* SeedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeedDictionary.swift; sourceTree = "<group>"; };
+		15708F9E3060F22E00864900 /* ChineseWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseWord.swift; sourceTree = "<group>"; };
+		15708F9F3060F22E00864900 /* WordStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordStore.swift; sourceTree = "<group>"; };
+		15708FA03060F22E00864900 /* PinyinFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinyinFormatter.swift; sourceTree = "<group>"; };
+		15708FA93060F25A00864900 /* CiCiWidgetViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiCiWidgetViews.swift; sourceTree = "<group>"; };
+		15708FAA3060F25A00864900 /* CiCiWidgetBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiCiWidgetBundle.swift; sourceTree = "<group>"; };
+		15708FAB3060F25A00864900 /* CiCiWidget.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CiCiWidget.entitlements; sourceTree = "<group>"; };
+		15708FAC3060F25A00864900 /* CiCiWidgetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiCiWidgetProvider.swift; sourceTree = "<group>"; };
+		15708FB03060F27300864900 /* SpeechHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
+		15708FB13060F27300864900 /* WordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
+		15708FB23060F27400864900 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		15708FB33060F27400864900 /* AIWordGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIWordGenerator.swift; sourceTree = "<group>"; };
+		15708FB43060F27400864900 /* RootTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		15708FB53060F27400864900 /* DictionaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		15708FB63060F27400864900 /* KeychainHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		15708FB73060F27400864900 /* CiCiDictApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiCiDictApp.swift; sourceTree = "<group>"; };
+		15708FB83060F27400864900 /* CEDICTParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEDICTParser.swift; sourceTree = "<group>"; };
+		15708FB93060F27400864900 /* CiCiDictApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CiCiDictApp.entitlements; sourceTree = "<group>"; };
+		15708FBA3060F27400864900 /* DictionaryLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryLookup.swift; sourceTree = "<group>"; };
+		15708FBB3060F27400864900 /* AddWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
+		15708FBC3060F27400864900 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		15708FBD3060F27400864900 /* MyVocabularyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVocabularyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +107,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15708F5B3060EB9200864900 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15708F633060EB9200864900 /* SwiftUI.framework in Frameworks */,
+				15708F613060EB9200864900 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		15708F403060EB7200864900 = {
 			isa = PBXGroup;
 			children = (
+				15708F773060EC4F00864900 /* Shared */,
 				15708F4B3060EB7200864900 /* CiCiDict */,
+				15708F643060EB9200864900 /* CiCiWidget */,
+				15708F5F3060EB9200864900 /* Frameworks */,
 				15708F4A3060EB7200864900 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				15708F493060EB7200864900 /* CiCiDict.app */,
+				15708F5E3060EB9200864900 /* CiCiWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +142,20 @@
 		15708F4B3060EB7200864900 /* CiCiDict */ = {
 			isa = PBXGroup;
 			children = (
-				15708F4C3060EB7200864900 /* CiCiDictApp.swift */,
-				15708F4E3060EB7200864900 /* ContentView.swift */,
+				15708FBB3060F27400864900 /* AddWordView.swift */,
+				15708FB33060F27400864900 /* AIWordGenerator.swift */,
+				15708FB83060F27400864900 /* CEDICTParser.swift */,
+				15708FB93060F27400864900 /* CiCiDictApp.entitlements */,
+				15708FB73060F27400864900 /* CiCiDictApp.swift */,
+				15708FBA3060F27400864900 /* DictionaryLookup.swift */,
+				15708FB53060F27400864900 /* DictionaryView.swift */,
+				15708FB63060F27400864900 /* KeychainHelper.swift */,
+				15708FBD3060F27400864900 /* MyVocabularyView.swift */,
+				15708FB23060F27400864900 /* ReviewView.swift */,
+				15708FB43060F27400864900 /* RootTabView.swift */,
+				15708FBC3060F27400864900 /* SettingsView.swift */,
+				15708FB03060F27300864900 /* SpeechHelper.swift */,
+				15708FB13060F27300864900 /* WordDetailView.swift */,
 				15708F503060EB7400864900 /* Assets.xcassets */,
 				15708F523060EB7400864900 /* Preview Content */,
 			);
@@ -67,6 +170,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		15708F5F3060EB9200864900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15708F603060EB9200864900 /* WidgetKit.framework */,
+				15708F623060EB9200864900 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15708F643060EB9200864900 /* CiCiWidget */ = {
+			isa = PBXGroup;
+			children = (
+				15708FAB3060F25A00864900 /* CiCiWidget.entitlements */,
+				15708FAA3060F25A00864900 /* CiCiWidgetBundle.swift */,
+				15708FAC3060F25A00864900 /* CiCiWidgetProvider.swift */,
+				15708FA93060F25A00864900 /* CiCiWidgetViews.swift */,
+				15708F693060EB9500864900 /* Assets.xcassets */,
+				15708F6B3060EB9500864900 /* Info.plist */,
+			);
+			path = CiCiWidget;
+			sourceTree = "<group>";
+		};
+		15708F773060EC4F00864900 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				15708F9E3060F22E00864900 /* ChineseWord.swift */,
+				15708FA03060F22E00864900 /* PinyinFormatter.swift */,
+				15708F9D3060F22E00864900 /* SeedDictionary.swift */,
+				15708F9F3060F22E00864900 /* WordStore.swift */,
+				15708F9A3060F20900864900 /* Theme.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +214,34 @@
 				15708F453060EB7200864900 /* Sources */,
 				15708F463060EB7200864900 /* Frameworks */,
 				15708F473060EB7200864900 /* Resources */,
+				15708F723060EB9500864900 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				15708F6D3060EB9500864900 /* PBXTargetDependency */,
 			);
 			name = CiCiDict;
 			productName = CiCiDict;
 			productReference = 15708F493060EB7200864900 /* CiCiDict.app */;
 			productType = "com.apple.product-type.application";
+		};
+		15708F5D3060EB9200864900 /* CiCiWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15708F6F3060EB9500864900 /* Build configuration list for PBXNativeTarget "CiCiWidgetExtension" */;
+			buildPhases = (
+				15708F5A3060EB9200864900 /* Sources */,
+				15708F5B3060EB9200864900 /* Frameworks */,
+				15708F5C3060EB9200864900 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CiCiWidgetExtension;
+			productName = CiCiWidgetExtension;
+			productReference = 15708F5E3060EB9200864900 /* CiCiWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +254,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					15708F483060EB7200864900 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					15708F5D3060EB9200864900 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +275,7 @@
 			projectRoot = "";
 			targets = (
 				15708F483060EB7200864900 /* CiCiDict */,
+				15708F5D3060EB9200864900 /* CiCiWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +290,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15708F5C3060EB9200864900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15708F6A3060EB9500864900 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +305,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15708F4F3060EB7200864900 /* ContentView.swift in Sources */,
-				15708F4D3060EB7200864900 /* CiCiDictApp.swift in Sources */,
+				15708FC73060F27400864900 /* DictionaryLookup.swift in Sources */,
+				15708FC03060F27400864900 /* ReviewView.swift in Sources */,
+				15708FA33060F22E00864900 /* ChineseWord.swift in Sources */,
+				15708FA53060F22E00864900 /* WordStore.swift in Sources */,
+				15708FCA3060F27400864900 /* MyVocabularyView.swift in Sources */,
+				15708FA73060F22E00864900 /* PinyinFormatter.swift in Sources */,
+				15708FC93060F27400864900 /* SettingsView.swift in Sources */,
+				15708FA13060F22E00864900 /* SeedDictionary.swift in Sources */,
+				15708FC13060F27400864900 /* AIWordGenerator.swift in Sources */,
+				15708FC53060F27400864900 /* CiCiDictApp.swift in Sources */,
+				15708FC23060F27400864900 /* RootTabView.swift in Sources */,
+				15708FC63060F27400864900 /* CEDICTParser.swift in Sources */,
+				15708FC43060F27400864900 /* KeychainHelper.swift in Sources */,
+				15708F9B3060F20900864900 /* Theme.swift in Sources */,
+				15708FC83060F27400864900 /* AddWordView.swift in Sources */,
+				15708FC33060F27400864900 /* DictionaryView.swift in Sources */,
+				15708FBF3060F27400864900 /* WordDetailView.swift in Sources */,
+				15708FBE3060F27400864900 /* SpeechHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15708F5A3060EB9200864900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15708FA43060F22E00864900 /* ChineseWord.swift in Sources */,
+				15708FA63060F22E00864900 /* WordStore.swift in Sources */,
+				15708FAF3060F25A00864900 /* CiCiWidgetProvider.swift in Sources */,
+				15708FA83060F22E00864900 /* PinyinFormatter.swift in Sources */,
+				15708FA23060F22E00864900 /* SeedDictionary.swift in Sources */,
+				15708FAD3060F25A00864900 /* CiCiWidgetViews.swift in Sources */,
+				15708F9C3060F20900864900 /* Theme.swift in Sources */,
+				15708FAE3060F25A00864900 /* CiCiWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15708F6D3060EB9500864900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15708F5D3060EB9200864900 /* CiCiWidgetExtension */;
+			targetProxy = 15708F6C3060EB9500864900 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		15708F553060EB7400864900 /* Debug */ = {
@@ -267,6 +474,7 @@
 		15708F583060EB7400864900 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -275,6 +483,7 @@
 				DEVELOPMENT_TEAM = XHJC3V7SGM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +505,7 @@
 		15708F593060EB7400864900 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +514,7 @@
 				DEVELOPMENT_TEAM = XHJC3V7SGM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +527,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.CiCiDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15708F703060EB9500864900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHJC3V7SGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiCiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CiCiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ok.CiCiDict.CiCiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15708F713060EB9500864900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHJC3V7SGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CiCiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CiCiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ok.CiCiDict.CiCiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +604,15 @@
 			buildConfigurations = (
 				15708F583060EB7400864900 /* Debug */,
 				15708F593060EB7400864900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15708F6F3060EB9500864900 /* Build configuration list for PBXNativeTarget "CiCiWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15708F703060EB9500864900 /* Debug */,
+				15708F713060EB9500864900 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
