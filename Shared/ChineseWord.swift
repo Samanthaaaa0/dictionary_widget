@@ -15,6 +15,13 @@ struct ChineseWord: Identifiable, Codable, Equatable, Hashable {
     var dateAdded: Date = Date()
     var isFavorite: Bool = false
 
+    var category: WordCategory = .uncategorized
+
+    // Every sense from the dictionary entry, raw (parentheses included) — used
+    // to show a fuller explanation in Details. englishShort above is already
+    // a cleaned, shortened version for list rows. Empty for seed/manual/AI words.
+    var allDefinitions: [String] = []
+
     // Context — shown in the app only, not on the widget.
     var exampleHanzi: String? = nil
     var examplePinyinNumbered: String? = nil

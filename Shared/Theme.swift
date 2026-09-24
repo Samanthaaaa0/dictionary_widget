@@ -1,12 +1,21 @@
 import SwiftUI
 
+/// Minimal Y2K-inspired theme — near-black background, a single turquoise
+/// accent used sparingly, soft glow on key text. Not loud, not neon-everywhere.
 enum Theme {
     static let background = Color(red: 0.04, green: 0.04, blue: 0.07)   // near-black w/ a hint of blue
     static let surface = Color(red: 0.09, green: 0.10, blue: 0.14)      // card background
     static let surfaceBorder = Color(red: 0.20, green: 0.22, blue: 0.26)
 
-    static let turquoise = Color(red: 0.20, green: 0.93, blue: 0.86)    // the one accent color
+    static let turquoise = Color(red: 0.20, green: 0.93, blue: 0.86)    // primary accent
     static let turquoiseDim = turquoise.opacity(0.55)
+
+    // Secondary Y2K cyber accents — used purposefully, not everywhere:
+    // magenta for your own input/creations, lime for "correct", amber for streaks/highlights.
+    static let magenta = Color(red: 0.98, green: 0.25, blue: 0.72)
+    static let purple = Color(red: 0.55, green: 0.36, blue: 0.95)
+    static let lime = Color(red: 0.68, green: 0.98, blue: 0.35)
+    static let amber = Color(red: 1.0, green: 0.78, blue: 0.30)
 
     static let textPrimary = Color(white: 0.96)
     static let textSecondary = Color(white: 0.62)

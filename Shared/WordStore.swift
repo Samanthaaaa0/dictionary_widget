@@ -40,6 +40,15 @@ enum WordStore {
         save(words)
     }
 
+    /// Generic in-place update — used for things like changing a word's
+    /// category from Details, without needing a dedicated method per field.
+    static func update(_ word: ChineseWord) {
+        var words = loadAll()
+        guard let idx = words.firstIndex(where: { $0.id == word.id }) else { return }
+        words[idx] = word
+        save(words)
+    }
+
     static func toggleFavorite(_ word: ChineseWord) {
         var words = loadAll()
         if let i = words.firstIndex(where: { $0.id == word.id }) {

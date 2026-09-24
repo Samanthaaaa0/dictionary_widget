@@ -7,6 +7,19 @@ import Foundation
 final class DictionaryLookup {
     static let shared = DictionaryLookup()
 
+    /// What happened the last time loadIfNeeded() ran — check this from
+    /// Settings (or the console) if search still only shows the ~56 seed
+    /// words after bundling cedict_ts.u8. Parsing fails silently otherwise,
+    /// which makes a bundling mistake very hard to tell apart from "it just
+    /// doesn't have that word."
+    enum LoadStatus {
+        case notLoadedYet
+        case fileNotFoundInBundle
+        case loaded(entryCount: Int)
+    }
+
+    private(set) var loadStatus: LoadStatus = .notLoadedYet
+
     private var entries: [String: CEDICTEntry] = [:]
     private var isLoaded = false
 
@@ -16,11 +29,27 @@ final class DictionaryLookup {
     /// but it's still done off the main thread.
     func loadIfNeeded() async {
         guard !isLoaded else { return }
-        if let url = Bundle.main.url(forResource: "cedict_ts", withExtension: "u8") {
-            entries = await Task.detached(priority: .utility) {
-                CEDICTParser.parse(fileURL: url)
-            }.value
+        guard let url = Bundle.main.url(forResource: "cedict_ts", withExtension: "u8") else {
+            // This is the #1 symptom of "I bundled the file but search still
+            // shows only the old words": Bundle.main can't find a file named
+            // EXACTLY cedict_ts.u8 with Target Membership checked for the
+            // CiCiDict app (not just added to the project, and not the widget).
+            // A very common trap: Finder silently naming it "cedict_ts.u8.txt".
+            print("⚠️ CiCiDict: cedict_ts.u8 not found in app bundle — using the small built-in dictionary only.")
+            loadStatus = .fileNotFoundInBundle
+            isLoaded = true
+            return
         }
+        let parsed = await Task.detached(priority: .utility) {
+            CEDICTParser.parse(fileURL: url)
+        }.value
+        entries = parsed
+        // parsed contains each entry keyed by BOTH simplified and traditional,
+        // so the true entry count is roughly half this number — still, 0 or a
+        // suspiciously tiny number here means parsing failed, not that the
+        // file is genuinely empty.
+        print("✅ CiCiDict: loaded \(parsed.count) dictionary keys from cedict_ts.u8.")
+        loadStatus = .loaded(entryCount: parsed.count)
         isLoaded = true
     }
 
@@ -34,7 +63,8 @@ final class DictionaryLookup {
                 hanzi: entry.simplified,
                 pinyinNumbered: entry.pinyinNumbered,
                 englishShort: Self.shorten(entry.definitions),
-                source: .dictionary
+                source: .dictionary,
+                allDefinitions: entry.definitions
             )
         }
         return SeedDictionary.words.first { $0.hanzi == trimmed }
@@ -67,7 +97,8 @@ final class DictionaryLookup {
                     hanzi: entry.simplified,
                     pinyinNumbered: entry.pinyinNumbered,
                     englishShort: Self.shorten(entry.definitions),
-                    source: .dictionary
+                    source: .dictionary,
+                    allDefinitions: entry.definitions
                 ))
             }
         }
@@ -86,9 +117,13 @@ final class DictionaryLookup {
         return results
     }
 
-    /// Keeps things short and widget-friendly — just the first sense or two.
+    /// Keeps things short and widget-friendly — just the first sense or two,
+    /// with any "(...)" asides (usage notes, region tags, etc.) stripped out.
+    /// The full raw definitions are kept separately in allDefinitions so
+    /// Details can still show that nuance, just not crammed into one line.
     private static func shorten(_ defs: [String]) -> String {
-        let picked = defs.prefix(2).joined(separator: "; ")
+        let cleaned = GlossFormatter.cleanList(defs)
+        let picked = cleaned.prefix(2).map(\.text).joined(separator: "; ")
         return picked.count > 60 ? String(picked.prefix(57)) + "…" : picked
     }
 }

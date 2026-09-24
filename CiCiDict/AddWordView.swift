@@ -18,6 +18,8 @@ struct AddWordView: View {
     @State private var examplePinyin = ""
     @State private var exampleEnglish = ""
 
+    @State private var category: WordCategory = .uncategorized
+
     var body: some View {
         NavigationStack {
             Form {
@@ -44,6 +46,17 @@ struct AddWordView: View {
                         TextField("Pinyin, e.g. wo3 men2 jia1 you2", text: $examplePinyin)
                             .textInputAutocapitalization(.never)
                         TextField("English translation", text: $exampleEnglish)
+                    }
+
+                    Section("Category") {
+                        Picker(selection: $category) {
+                            ForEach(WordCategory.allCases) { cat in
+                                Label(cat.label, systemImage: cat.icon).tag(cat)
+                            }
+                        } label: {
+                            Label(category.label, systemImage: category.icon)
+                                .foregroundStyle(category.color)
+                        }
                     }
                 }
 
@@ -130,6 +143,7 @@ struct AddWordView: View {
             preview.examplePinyinNumbered = examplePinyin
             preview.exampleEnglish = exampleEnglish
         }
+        preview.category = category
         WordStore.add(preview)
         dismiss()
     }

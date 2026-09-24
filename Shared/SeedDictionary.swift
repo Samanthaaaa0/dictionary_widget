@@ -46,6 +46,7 @@ enum SeedDictionary {
         w("钱", "qian2", "money"),
         w("书", "shu1", "book"),
         w("车", "che1", "car"),
+        w("很", "hen3", "very"),
         w("飞机", "fei1 ji1", "airplane"),
         w("火车", "huo3 che1", "train"),
         w("学校", "xue2 xiao4", "school"),

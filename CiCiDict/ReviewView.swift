@@ -3,11 +3,12 @@ import SwiftUI
 struct ReviewView: View {
     @State private var queue: [ChineseWord] = []
     @State private var revealed = false
+    @State private var celebrate = false
 
     var body: some View {
         NavigationStack {
             ZStack {
-                Theme.background.ignoresSafeArea()
+                Y2KBackground()
 
                 if queue.isEmpty {
                     ContentUnavailableView(
@@ -24,7 +25,7 @@ struct ReviewView: View {
 
                         Spacer()
 
-                        card
+                        flipCard
 
                         Spacer()
 
@@ -36,13 +37,19 @@ struct ReviewView: View {
                                     .buttonStyle(Y2KButtonStyle(filled: true))
                             }
                         } else {
-                            Button("Reveal") {
-                                withAnimation(.spring(response: 0.35)) { revealed = true }
+                            Button("Tap to flip") {
+                                withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) {
+                                    revealed = true
+                                }
                             }
                             .buttonStyle(Y2KButtonStyle(filled: true))
                         }
                     }
                     .padding()
+                }
+
+                if celebrate {
+                    SparkleBurst()
                 }
             }
             .navigationTitle("Review")
@@ -50,26 +57,49 @@ struct ReviewView: View {
         }
     }
 
-    private var card: some View {
-        VStack(spacing: 16) {
-            Text(queue[0].hanzi)
-                .font(.system(size: 64, weight: .bold, design: .rounded))
-                .foregroundStyle(Theme.textPrimary)
+    /// A genuine 3D flip: the whole card rotates 180°, and the back face is
+    /// pre-rotated 180° so it reads correctly once the flip completes.
+    private var flipCard: some View {
+        ZStack {
+            cardFace {
+                Text(queue[0].hanzi)
+                    .font(.system(size: 64, weight: .bold, design: .rounded))
+                    .foregroundStyle(Theme.textPrimary)
+                    .y2kFloating()
+            }
+            .opacity(revealed ? 0 : 1)
 
-            if revealed {
-                Text(queue[0].pinyinDisplay)
-                    .font(.title3)
-                    .foregroundStyle(Theme.turquoise)
-                Text(queue[0].englishShort)
-                    .font(.body)
-                    .foregroundStyle(Theme.textSecondary)
-                    .multilineTextAlignment(.center)
+            cardFace {
+                VStack(spacing: 12) {
+                    Text(queue[0].pinyinDisplay)
+                        .font(.title2)
+                        .foregroundStyle(Theme.turquoise)
+                    Text(queue[0].englishShort)
+                        .font(.body)
+                        .foregroundStyle(Theme.textSecondary)
+                        .multilineTextAlignment(.center)
+                }
+            }
+            .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+            .opacity(revealed ? 1 : 0)
+        }
+        .rotation3DEffect(.degrees(revealed ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+        .padding(.horizontal)
+        .onTapGesture {
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.75)) {
+                revealed.toggle()
             }
         }
-        .padding(32)
-        .frame(maxWidth: .infinity)
+    }
+
+    private func cardFace<Content: View>(@ViewBuilder content: () -> Content) -> some View {
+        VStack {
+            RetroTitleBar(title: "FLASHCARD")
+            content()
+                .frame(maxWidth: .infinity, minHeight: 140)
+        }
+        .padding()
         .y2kCard(cornerRadius: 28)
-        .padding(.horizontal)
     }
 
     private func loadQueue() {
@@ -83,5 +113,13 @@ struct ReviewView: View {
         let word = queue.removeFirst()
         WordStore.recordReview(word, correct: correct)
         revealed = false
+
+        if correct {
+            celebrate = true
+            Task {
+                try? await Task.sleep(nanoseconds: 900_000_000)
+                celebrate = false
+            }
+        }
     }
 }
