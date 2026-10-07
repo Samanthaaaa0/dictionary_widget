@@ -7,6 +7,8 @@ struct CiCiDictApp: App {
             RootTabView()
                 .task {
                     await DictionaryLookup.shared.loadIfNeeded()
+                    HSKWordList.backfillSavedWords()
+                    DailyWordService.ensureTodaysWordAdded()
                 }
         }
     }

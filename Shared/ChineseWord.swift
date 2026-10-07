@@ -15,12 +15,18 @@ struct ChineseWord: Identifiable, Codable, Equatable, Hashable {
     var dateAdded: Date = Date()
     var isFavorite: Bool = false
 
+    // Manual (no-AI) categorization — set from Add Word or Details.
     var category: WordCategory = .uncategorized
 
     // Every sense from the dictionary entry, raw (parentheses included) — used
     // to show a fuller explanation in Details. englishShort above is already
     // a cleaned, shortened version for list rows. Empty for seed/manual/AI words.
     var allDefinitions: [String] = []
+
+    // Automatic categorization, no AI involved — just a lookup against the
+    // official HSK vocabulary lists (currently HSK 1 is bundled). nil means
+    // "not on any bundled HSK list yet," not "unknown level."
+    var hskLevel: Int? = nil
 
     // Context — shown in the app only, not on the widget.
     var exampleHanzi: String? = nil

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @StateObject private var themeRefresh = ThemeRefreshTrigger.shared
+
     var body: some View {
         TabView {
             HomeView()
@@ -23,6 +25,7 @@ struct RootTabView: View {
         }
         .tint(Theme.turquoise)
         .preferredColorScheme(.dark)
+        .id(themeRefresh.tick)
     }
 }
 

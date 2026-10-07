@@ -181,9 +181,19 @@ private struct WordCard: View {
                 .frame(minWidth: 48, alignment: .leading)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(word.pinyinDisplay)
-                    .font(.subheadline)
-                    .foregroundStyle(Theme.turquoise)
+                HStack(spacing: 6) {
+                    Text(word.pinyinDisplay)
+                        .font(.subheadline)
+                        .foregroundStyle(Theme.turquoise)
+                    if let level = word.hskLevel {
+                        Text("HSK\(level)")
+                            .font(.system(size: 9, weight: .bold))
+                            .foregroundStyle(Theme.background)
+                            .padding(.horizontal, 5)
+                            .padding(.vertical, 1.5)
+                            .background(Theme.lime, in: Capsule())
+                    }
+                }
                 Text(word.englishShort)
                     .font(.footnote)
                     .foregroundStyle(Theme.textSecondary)

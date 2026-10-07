@@ -117,6 +117,28 @@ final class DictionaryLookup {
         return results
     }
 
+    /// A deterministic pick from the full bundled dictionary, skipping
+    /// anything already saved — used by DailyWordService once you've saved
+    /// every seed word, so there's still something new to offer each day.
+    func deterministicUnseenWord(excluding saved: Set<String>, day: Int) -> ChineseWord? {
+        guard !entries.isEmpty else { return nil }
+        let keys = entries.keys.sorted()
+        guard !keys.isEmpty else { return nil }
+        for offset in 0..<keys.count {
+            let key = keys[(day + offset) % keys.count]
+            if !saved.contains(key), let entry = entries[key] {
+                return ChineseWord(
+                    hanzi: entry.simplified,
+                    pinyinNumbered: entry.pinyinNumbered,
+                    englishShort: Self.shorten(entry.definitions),
+                    source: .dictionary,
+                    allDefinitions: entry.definitions
+                )
+            }
+        }
+        return nil
+    }
+
     /// Keeps things short and widget-friendly — just the first sense or two,
     /// with any "(...)" asides (usage notes, region tags, etc.) stripped out.
     /// The full raw definitions are kept separately in allDefinitions so

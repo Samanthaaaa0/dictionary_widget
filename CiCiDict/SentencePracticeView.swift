@@ -24,24 +24,42 @@ struct SentencePracticeView: View {
             return matches.isEmpty ? nil : (label, matches)
         }
     }
-
+ 
     var body: some View {
         NavigationStack {
             ZStack {
                 Y2KBackground()
 
                 if bank.isEmpty && built.isEmpty {
-                    ContentUnavailableView(
-                        "Learn a few words first",
-                        systemImage: "square.stack.3d.up.slash",
-                        description: Text("Save some words in Dictionary or My Words, then come back to build sentences with them ✦")
-                    )
+                    VStack(spacing: 16) {
+                        ContentUnavailableView(
+                            "Learn a few words first",
+                            systemImage: "square.stack.3d.up.slash",
+                            description: Text("Save some words in Dictionary or My Words, then come back to build sentences with them ✦")
+                        )
+                        NavigationLink {
+                            PhrasebookView()
+                        } label: {
+                            Label("Browse common phrases instead", systemImage: "text.book.closed.fill")
+                                .font(.footnote.weight(.semibold))
+                        }
+                        .buttonStyle(Y2KButtonStyle(filled: false))
+                    }
                 } else {
                     ScrollView {
                         VStack(spacing: 20) {
                             RetroTitleBar(title: "SENTENCE BUILDER", accent: Theme.magenta)
                                 .padding(.horizontal)
                                 .padding(.top, 8)
+
+                            NavigationLink {
+                                PhrasebookView()
+                            } label: {
+                                Label("Browse common phrases", systemImage: "text.book.closed.fill")
+                                    .font(.footnote.weight(.semibold))
+                            }
+                            .buttonStyle(Y2KButtonStyle(filled: false))
+                            .padding(.horizontal)
 
                             // Your sentence — words you've tapped, in order.
                             VStack(alignment: .leading, spacing: 10) {

@@ -12,6 +12,8 @@ struct HomeView: View {
     @State private var spin = false
     @State private var celebrate = false
     @State private var dueCount = 0
+    @State private var dailyWord: ChineseWord?
+    @State private var showDailyBanner = false
 
     private let deco = ["✦", "☆", "♡", "✧", "⋆", "◇"]
 
@@ -23,6 +25,11 @@ struct HomeView: View {
                 ScrollView {
                     VStack(spacing: 22) {
                         header
+
+                        if showDailyBanner, let dailyWord {
+                            dailyBanner(dailyWord)
+                                .padding(.horizontal)
+                        }
 
                         if let current {
                             heroCard(current)
@@ -51,6 +58,38 @@ struct HomeView: View {
             .navigationTitle("CiCi")
             .onAppear(perform: refresh)
         }
+    }
+
+    private func dailyBanner(_ word: ChineseWord) -> some View {
+        HStack(spacing: 10) {
+            NavigationLink(value: word) {
+                HStack(spacing: 10) {
+                    Text("🌱")
+                    VStack(alignment: .leading, spacing: 1) {
+                        Text("Today's new word: \(word.hanzi) — added to Review")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(Theme.textPrimary)
+                        Text(word.pinyinDisplay)
+                            .font(.caption2)
+                            .foregroundStyle(Theme.turquoise)
+                    }
+                }
+            }
+            .buttonStyle(.plain)
+
+            Spacer()
+
+            Button {
+                withAnimation { showDailyBanner = false }
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(Theme.textSecondary)
+            }
+            .buttonStyle(.plain)
+        }
+        .padding(12)
+        .y2kCard(cornerRadius: 14)
     }
 
     private var header: some View {
@@ -169,6 +208,13 @@ struct HomeView: View {
     private func refresh() {
         words = WordStore.loadAll()
         dueCount = WordStore.wordsDueForReview(from: words).count
+
+        if dailyWord == nil {
+            dailyWord = DailyWordService.ensureTodaysWordAdded()
+            showDailyBanner = dailyWord != nil
+            if dailyWord != nil { words = WordStore.loadAll() }
+        }
+
         // Only pick a fresh word on first appear — NavigationStack re-fires
         // onAppear every time you pop back from Details, and re-rolling here
         // was silently throwing away whatever you'd shuffled to.
@@ -205,7 +251,7 @@ struct HomeView: View {
     /// Favoriting/pinning a seed word (not yet in "My Words") should save it first.
     private func ensureSaved(_ word: ChineseWord) {
         guard !words.contains(where: { $0.hanzi == word.hanzi }) else { return }
-        WordStore.add(word)
+        WordStore.add(HSKWordList.apply(to: word))
         words = WordStore.loadAll()
     }
 }

@@ -62,6 +62,16 @@ struct WordDetailView: View {
                                 .padding(.vertical, 4)
                                 .background(Theme.turquoise.opacity(0.12), in: Capsule())
 
+                            if let level = word.hskLevel {
+                                Text("HSK \(level)")
+                                    .font(.caption2.weight(.bold))
+                                    .tracking(1.2)
+                                    .foregroundStyle(Theme.lime)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 4)
+                                    .background(Theme.lime.opacity(0.12), in: Capsule())
+                            }
+
                             categoryMenu
                         }
                     }

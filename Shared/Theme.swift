@@ -1,26 +1,26 @@
 import SwiftUI
 
-/// Minimal Y2K-inspired theme — near-black background, a single turquoise
-/// accent used sparingly, soft glow on key text. Not loud, not neon-everywhere.
+/// Y2K-inspired theme, now customizable — all values forward to whichever
+/// Y2KThemePreset is currently selected (see Y2KThemeStore), so this file
+/// is the only thing that changed to make theming possible. Every other
+/// view still just calls Theme.turquoise, Theme.background, etc. as before.
 enum Theme {
-    static let background = Color(red: 0.04, green: 0.04, blue: 0.07)   // near-black w/ a hint of blue
-    static let surface = Color(red: 0.09, green: 0.10, blue: 0.14)      // card background
-    static let surfaceBorder = Color(red: 0.20, green: 0.22, blue: 0.26)
+    static var background: Color { Y2KThemeStore.currentPalette.background }
+    static var surface: Color { Y2KThemeStore.currentPalette.surface }
+    static var surfaceBorder: Color { Y2KThemeStore.currentPalette.surfaceBorder }
 
-    static let turquoise = Color(red: 0.20, green: 0.93, blue: 0.86)    // primary accent
-    static let turquoiseDim = turquoise.opacity(0.55)
+    static var turquoise: Color { Y2KThemeStore.currentPalette.turquoise }
+    static var turquoiseDim: Color { turquoise.opacity(0.55) }
 
-    // Secondary Y2K cyber accents — used purposefully, not everywhere:
-    // magenta for your own input/creations, lime for "correct", amber for streaks/highlights.
-    static let magenta = Color(red: 0.98, green: 0.25, blue: 0.72)
-    static let purple = Color(red: 0.55, green: 0.36, blue: 0.95)
-    static let lime = Color(red: 0.68, green: 0.98, blue: 0.35)
-    static let amber = Color(red: 1.0, green: 0.78, blue: 0.30)
+    static var magenta: Color { Y2KThemeStore.currentPalette.magenta }
+    static var purple: Color { Y2KThemeStore.currentPalette.purple }
+    static var lime: Color { Y2KThemeStore.currentPalette.lime }
+    static var amber: Color { Y2KThemeStore.currentPalette.amber }
 
-    static let textPrimary = Color(white: 0.96)
-    static let textSecondary = Color(white: 0.62)
+    static var textPrimary: Color { Y2KThemeStore.currentPalette.textPrimary }
+    static var textSecondary: Color { Y2KThemeStore.currentPalette.textSecondary }
 
-    static let glow = turquoise.opacity(0.45)
+    static var glow: Color { turquoise.opacity(0.45) }
 }
 
 extension View {

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		1515601F306DFC5F0039C32D /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515601E306DFC5F0039C32D /* AddWordView.swift */; };
+=======
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
+		15156021306DFCAF0039C32D /* DailyWordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15156020306DFCAF0039C32D /* DailyWordService.swift */; };
+		15156023306E01690039C32D /* HSKWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15156022306E01690039C32D /* HSKWordList.swift */; };
+		15156025306E017A0039C32D /* Phrasebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15156024306E01790039C32D /* Phrasebook.swift */; };
+		15156027306E01FB0039C32D /* PhrasebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15156026306E01FB0039C32D /* PhrasebookView.swift */; };
 		153087833064C5CD00248D1C /* WordCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153087823064C5CD00248D1C /* WordCategory.swift */; };
 		153087853064C5ED00248D1C /* GlossFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153087843064C5ED00248D1C /* GlossFormatter.swift */; };
 		153087863064F81700248D1C /* WordCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153087823064C5CD00248D1C /* WordCategory.swift */; };
@@ -37,19 +45,34 @@
 		15CEAC5530611B03000BA365 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4030611B02000BA365 /* SettingsView.swift */; };
 		15CEAC5630611B03000BA365 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4130611B02000BA365 /* DictionaryView.swift */; };
 		15CEAC5730611B03000BA365 /* SpeechHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4330611B02000BA365 /* SpeechHelper.swift */; };
-		15CEAC5830611B03000BA365 /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4430611B02000BA365 /* AddWordView.swift */; };
-		15CEAC5930611B03000BA365 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CEAC4530611B02000BA365 /* Preview Assets.xcassets */; };
 		15CEAC5A30611B03000BA365 /* MyVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4730611B02000BA365 /* MyVocabularyView.swift */; };
 		15CEAC5B30611B03000BA365 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4830611B02000BA365 /* ReviewView.swift */; };
 		15CEAC5C30611B03000BA365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4930611B02000BA365 /* HomeView.swift */; };
 		15CEAC5D30611B03000BA365 /* DictionaryLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4A30611B03000BA365 /* DictionaryLookup.swift */; };
+<<<<<<< HEAD
 		15CEAC5E30611B03000BA365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CEAC4B30611B03000BA365 /* Assets.xcassets */; };
+=======
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 		15CEAC5F30611B03000BA365 /* LocalSentenceTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4C30611B03000BA365 /* LocalSentenceTranslator.swift */; };
 		15CEAC6030611B03000BA365 /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4D30611B03000BA365 /* WordDetailView.swift */; };
 		15CEAC6130611B03000BA365 /* AIWordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4E30611B03000BA365 /* AIWordGenerator.swift */; };
 		15CEAC6230611B03000BA365 /* CiCiDictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC4F30611B03000BA365 /* CiCiDictApp.swift */; };
 		15CEAC6330611B03000BA365 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CEAC5030611B03000BA365 /* RootTabView.swift */; };
 		15CEAC6D30612209000BA365 /* cedict_ts.u8 in Resources */ = {isa = PBXBuildFile; fileRef = 15CEAC6C30612209000BA365 /* cedict_ts.u8 */; };
+		15F45F5E3076108800FC8E95 /* ThemeRefreshTrigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F5D3076108800FC8E95 /* ThemeRefreshTrigger.swift */; };
+		15F45F60307610B600FC8E95 /* Y2KThemePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F5F307610B600FC8E95 /* Y2KThemePreset.swift */; };
+		15F45F62307610BF00FC8E95 /* Y2KThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F61307610BF00FC8E95 /* Y2KThemeStore.swift */; };
+		15F45F633076158000FC8E95 /* Y2KThemePreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F5F307610B600FC8E95 /* Y2KThemePreset.swift */; };
+		15F45F643076158200FC8E95 /* Y2KThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F61307610BF00FC8E95 /* Y2KThemeStore.swift */; };
+<<<<<<< HEAD
+=======
+		15F45F673076236600FC8E95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 15F45F663076236400FC8E95 /* README.md */; };
+		15F45F6930762A0500FC8E95 /* ChineseSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F6830762A0500FC8E95 /* ChineseSuggestion.swift */; };
+		15F45F6B30762A1600FC8E95 /* ChineseSuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F6A30762A1600FC8E95 /* ChineseSuggestionService.swift */; };
+		15F45F743076890500FC8E95 /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F733076890500FC8E95 /* AddWordView.swift */; };
+		15F45F7630768A4600FC8E95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15F45F7530768A4600FC8E95 /* Assets.xcassets */; };
+		15F45F7830768C5A00FC8E95 /* WordBreakdownItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F45F7730768C5A00FC8E95 /* WordBreakdownItem.swift */; };
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +100,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		1515601E306DFC5F0039C32D /* AddWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddWordView.swift; path = ../../../../Downloads/CiCiDict/CiCiDict/AddWordView.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
+		15156020306DFCAF0039C32D /* DailyWordService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyWordService.swift; sourceTree = "<group>"; };
+		15156022306E01690039C32D /* HSKWordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSKWordList.swift; sourceTree = "<group>"; };
+		15156024306E01790039C32D /* Phrasebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Phrasebook.swift; sourceTree = "<group>"; };
+		15156026306E01FB0039C32D /* PhrasebookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhrasebookView.swift; sourceTree = "<group>"; };
 		153087823064C5CD00248D1C /* WordCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCategory.swift; sourceTree = "<group>"; };
 		153087843064C5ED00248D1C /* GlossFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossFormatter.swift; sourceTree = "<group>"; };
 		15708F493060EB7200864900 /* CiCiDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiCiDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,19 +135,33 @@
 		15CEAC4130611B02000BA365 /* DictionaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		15CEAC4230611B02000BA365 /* CiCiDictApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = CiCiDictApp.entitlements; sourceTree = "<group>"; };
 		15CEAC4330611B02000BA365 /* SpeechHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechHelper.swift; sourceTree = "<group>"; };
-		15CEAC4430611B02000BA365 /* AddWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
-		15CEAC4530611B02000BA365 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		15CEAC4730611B02000BA365 /* MyVocabularyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVocabularyView.swift; sourceTree = "<group>"; };
 		15CEAC4830611B02000BA365 /* ReviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		15CEAC4930611B02000BA365 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		15CEAC4A30611B03000BA365 /* DictionaryLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryLookup.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		15CEAC4B30611B03000BA365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/CiCiDict/CiCiDict/Assets.xcassets; sourceTree = "<group>"; };
+=======
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 		15CEAC4C30611B03000BA365 /* LocalSentenceTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalSentenceTranslator.swift; sourceTree = "<group>"; };
 		15CEAC4D30611B03000BA365 /* WordDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
 		15CEAC4E30611B03000BA365 /* AIWordGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIWordGenerator.swift; sourceTree = "<group>"; };
 		15CEAC4F30611B03000BA365 /* CiCiDictApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CiCiDictApp.swift; sourceTree = "<group>"; };
 		15CEAC5030611B03000BA365 /* RootTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		15CEAC6C30612209000BA365 /* cedict_ts.u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = cedict_ts.u8; path = ../../../Downloads/cedict_ts.u8; sourceTree = SOURCE_ROOT; };
+		15F45F5D3076108800FC8E95 /* ThemeRefreshTrigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeRefreshTrigger.swift; sourceTree = "<group>"; };
+		15F45F5F307610B600FC8E95 /* Y2KThemePreset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Y2KThemePreset.swift; sourceTree = "<group>"; };
+		15F45F61307610BF00FC8E95 /* Y2KThemeStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Y2KThemeStore.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		15F45F663076236400FC8E95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		15F45F6830762A0500FC8E95 /* ChineseSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseSuggestion.swift; sourceTree = "<group>"; };
+		15F45F6A30762A1600FC8E95 /* ChineseSuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseSuggestionService.swift; sourceTree = "<group>"; };
+		15F45F723076797300FC8E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		15F45F733076890500FC8E95 /* AddWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
+		15F45F7530768A4600FC8E95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15F45F7730768C5A00FC8E95 /* WordBreakdownItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBreakdownItem.swift; sourceTree = "<group>"; };
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +187,10 @@
 		15708F403060EB7200864900 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+=======
+				15F45F663076236400FC8E95 /* README.md */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 				15708F773060EC4F00864900 /* Shared */,
 				15708F4B3060EB7200864900 /* CiCiDict */,
 				15708F643060EB9200864900 /* CiCiWidget */,
@@ -162,30 +211,47 @@
 		15708F4B3060EB7200864900 /* CiCiDict */ = {
 			isa = PBXGroup;
 			children = (
-				15CEAC6C30612209000BA365 /* cedict_ts.u8 */,
-				15CEAC4430611B02000BA365 /* AddWordView.swift */,
+<<<<<<< HEAD
+				1515601E306DFC5F0039C32D /* AddWordView.swift */,
 				15CEAC4E30611B03000BA365 /* AIWordGenerator.swift */,
 				15CEAC4B30611B03000BA365 /* Assets.xcassets */,
+=======
+				15F45F723076797300FC8E95 /* Info.plist */,
+				15CEAC4E30611B03000BA365 /* AIWordGenerator.swift */,
+				15F45F733076890500FC8E95 /* AddWordView.swift */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
+				15CEAC6C30612209000BA365 /* cedict_ts.u8 */,
 				15CEAC3D30611B02000BA365 /* CEDICTParser.swift */,
 				15CEAC4230611B02000BA365 /* CiCiDictApp.entitlements */,
 				15CEAC4F30611B03000BA365 /* CiCiDictApp.swift */,
+				15156020306DFCAF0039C32D /* DailyWordService.swift */,
 				15CEAC4A30611B03000BA365 /* DictionaryLookup.swift */,
 				15CEAC4130611B02000BA365 /* DictionaryView.swift */,
+				153087843064C5ED00248D1C /* GlossFormatter.swift */,
 				15CEAC4930611B02000BA365 /* HomeView.swift */,
+				15156022306E01690039C32D /* HSKWordList.swift */,
 				15CEAC3C30611B02000BA365 /* KeychainHelper.swift */,
 				15CEAC4C30611B03000BA365 /* LocalSentenceTranslator.swift */,
 				15CEAC4730611B02000BA365 /* MyVocabularyView.swift */,
-				15CEAC4630611B02000BA365 /* Preview Content */,
+				15156024306E01790039C32D /* Phrasebook.swift */,
+				15156026306E01FB0039C32D /* PhrasebookView.swift */,
+				15708F523060EB7400864900 /* Preview Content */,
 				15CEAC4830611B02000BA365 /* ReviewView.swift */,
 				15CEAC5030611B03000BA365 /* RootTabView.swift */,
 				15CEAC3E30611B02000BA365 /* Sentencechecker .swift */,
 				15CEAC3F30611B02000BA365 /* SentencePracticeView.swift */,
 				15CEAC4030611B02000BA365 /* SettingsView.swift */,
 				15CEAC4330611B02000BA365 /* SpeechHelper.swift */,
-				15CEAC4D30611B03000BA365 /* WordDetailView.swift */,
-				15708F523060EB7400864900 /* Preview Content */,
+				15F45F5D3076108800FC8E95 /* ThemeRefreshTrigger.swift */,
 				153087823064C5CD00248D1C /* WordCategory.swift */,
-				153087843064C5ED00248D1C /* GlossFormatter.swift */,
+				15CEAC4D30611B03000BA365 /* WordDetailView.swift */,
+<<<<<<< HEAD
+=======
+				15F45F6830762A0500FC8E95 /* ChineseSuggestion.swift */,
+				15F45F6A30762A1600FC8E95 /* ChineseSuggestionService.swift */,
+				15F45F7530768A4600FC8E95 /* Assets.xcassets */,
+				15F45F7730768C5A00FC8E95 /* WordBreakdownItem.swift */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 			);
 			path = CiCiDict;
 			sourceTree = "<group>";
@@ -229,17 +295,10 @@
 				15708F9F3060F22E00864900 /* WordStore.swift */,
 				15708F9A3060F20900864900 /* Theme.swift */,
 				15CEAC2830610C37000BA365 /* Retroui.swift */,
+				15F45F5F307610B600FC8E95 /* Y2KThemePreset.swift */,
+				15F45F61307610BF00FC8E95 /* Y2KThemeStore.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		15CEAC4630611B02000BA365 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				15CEAC4530611B02000BA365 /* Preview Assets.xcassets */,
-			);
-			name = "Preview Content";
-			path = "../../../../Downloads/CiCiDict/CiCiDict/Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +382,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15CEAC5930611B03000BA365 /* Preview Assets.xcassets in Resources */,
 				15CEAC6D30612209000BA365 /* cedict_ts.u8 in Resources */,
 				15708F543060EB7400864900 /* Preview Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				15CEAC5E30611B03000BA365 /* Assets.xcassets in Resources */,
+=======
+				15F45F7630768A4600FC8E95 /* Assets.xcassets in Resources */,
+				15F45F673076236600FC8E95 /* README.md in Resources */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,27 +412,53 @@
 				15CEAC6230611B03000BA365 /* CiCiDictApp.swift in Sources */,
 				15708FA53060F22E00864900 /* WordStore.swift in Sources */,
 				15CEAC5730611B03000BA365 /* SpeechHelper.swift in Sources */,
+				15156023306E01690039C32D /* HSKWordList.swift in Sources */,
 				15708FA73060F22E00864900 /* PinyinFormatter.swift in Sources */,
 				153087853064C5ED00248D1C /* GlossFormatter.swift in Sources */,
 				15CEAC5A30611B03000BA365 /* MyVocabularyView.swift in Sources */,
 				15CEAC5C30611B03000BA365 /* HomeView.swift in Sources */,
 				15708FA13060F22E00864900 /* SeedDictionary.swift in Sources */,
+				15156027306E01FB0039C32D /* PhrasebookView.swift in Sources */,
+<<<<<<< HEAD
+=======
+				15F45F6B30762A1600FC8E95 /* ChineseSuggestionService.swift in Sources */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
+				15F45F60307610B600FC8E95 /* Y2KThemePreset.swift in Sources */,
 				15CEAC5630611B03000BA365 /* DictionaryView.swift in Sources */,
 				15CEAC5330611B03000BA365 /* Sentencechecker .swift in Sources */,
+				15156021306DFCAF0039C32D /* DailyWordService.swift in Sources */,
+				15156025306E017A0039C32D /* Phrasebook.swift in Sources */,
 				15CEAC5B30611B03000BA365 /* ReviewView.swift in Sources */,
+				15F45F62307610BF00FC8E95 /* Y2KThemeStore.swift in Sources */,
 				15CEAC5130611B03000BA365 /* KeychainHelper.swift in Sources */,
+<<<<<<< HEAD
 				15CEAC6130611B03000BA365 /* AIWordGenerator.swift in Sources */,
 				15CEAC6330611B03000BA365 /* RootTabView.swift in Sources */,
+				15F45F5E3076108800FC8E95 /* ThemeRefreshTrigger.swift in Sources */,
+=======
+				15F45F743076890500FC8E95 /* AddWordView.swift in Sources */,
+				15CEAC6130611B03000BA365 /* AIWordGenerator.swift in Sources */,
+				15CEAC6330611B03000BA365 /* RootTabView.swift in Sources */,
+				15F45F5E3076108800FC8E95 /* ThemeRefreshTrigger.swift in Sources */,
+				15F45F6930762A0500FC8E95 /* ChineseSuggestion.swift in Sources */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 				15CEAC2930610C37000BA365 /* Retroui.swift in Sources */,
 				15CEAC5230611B03000BA365 /* CEDICTParser.swift in Sources */,
 				15CEAC5430611B03000BA365 /* SentencePracticeView.swift in Sources */,
 				15708F9B3060F20900864900 /* Theme.swift in Sources */,
 				15CEAC5D30611B03000BA365 /* DictionaryLookup.swift in Sources */,
-				15CEAC5830611B03000BA365 /* AddWordView.swift in Sources */,
 				15CEAC6030611B03000BA365 /* WordDetailView.swift in Sources */,
+<<<<<<< HEAD
+				1515601F306DFC5F0039C32D /* AddWordView.swift in Sources */,
 				15CEAC5F30611B03000BA365 /* LocalSentenceTranslator.swift in Sources */,
 				15CEAC5530611B03000BA365 /* SettingsView.swift in Sources */,
 				153087833064C5CD00248D1C /* WordCategory.swift in Sources */,
+=======
+				15CEAC5F30611B03000BA365 /* LocalSentenceTranslator.swift in Sources */,
+				15CEAC5530611B03000BA365 /* SettingsView.swift in Sources */,
+				153087833064C5CD00248D1C /* WordCategory.swift in Sources */,
+				15F45F7830768C5A00FC8E95 /* WordBreakdownItem.swift in Sources */,
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +466,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F45F643076158200FC8E95 /* Y2KThemeStore.swift in Sources */,
 				15CEAC2A30610C37000BA365 /* Retroui.swift in Sources */,
 				15708FA43060F22E00864900 /* ChineseWord.swift in Sources */,
 				15708FA63060F22E00864900 /* WordStore.swift in Sources */,
 				15708FAF3060F25A00864900 /* CiCiWidgetProvider.swift in Sources */,
+				15F45F633076158000FC8E95 /* Y2KThemePreset.swift in Sources */,
 				15708FA83060F22E00864900 /* PinyinFormatter.swift in Sources */,
 				15708FA23060F22E00864900 /* SeedDictionary.swift in Sources */,
 				15708FAD3060F25A00864900 /* CiCiWidgetViews.swift in Sources */,
@@ -526,13 +617,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CiCiDict/Preview Content\"";
 				DEVELOPMENT_TEAM = XHJC3V7SGM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< HEAD
 				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
+=======
+				INFOPLIST_FILE = CiCiDict/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,6 +643,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.CiCiDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -557,13 +656,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CiCiDict/Preview Content\"";
 				DEVELOPMENT_TEAM = XHJC3V7SGM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+<<<<<<< HEAD
 				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
+=======
+				INFOPLIST_FILE = CiCiDict/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AteUP;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+>>>>>>> 45a48f2 (new UI, local translation page and explanation for each word)
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -576,6 +682,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ok.CiCiDict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
